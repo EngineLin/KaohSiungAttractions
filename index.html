@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高雄旅遊景點資料庫</title>
+	<link rel="stylesheet" href="all.css">
+</head>
+<body >
+	<div id="app" class="wrap">
+		<div class="header">
+			<h1>高雄旅遊資訊</h1>
+			<select name="areaSelector" id="areaSelector" @change="changeContentBySelector(thisValue)" v-model="thisValue">
+				<option value='' >--請選擇行政區--</option>
+				<option v-for="zone in zoneList" :value="zone" >{{ zone }}</option>
+			</select>
+		</div>
+		<div class="fastList">
+			<h2>熱門行政區</h2>
+			<ul >
+				<a href="#iconDown"><li class="color01" @click.prevent="changeContentByBtn(0)">苓雅區</li></a>
+				<a href="#iconDown"><li class="color02" @click.prevent="changeContentByBtn(1)">三民區</li></a>
+				<a href="#iconDown"><li class="color03" @click.prevent="changeContentByBtn(2)">新興區</li></a>
+				<a href="#iconDown"><li class="color04" @click.prevent="changeContentByBtn(3)">鹽埕區</li></a>
+			</ul>
+		</div>
+		<h2 id=mapTitle>你的景點地圖</h2>
+		<div id="map"></div>
+
+		<div class="line"></div>
+		<div id="iconDown"><img src="images/icons_down.png" alt="A down icon"></div>
+
+		<!-- JSON zoon -->
+		<h2 id="contentTitle">{{ title }}</h2>
+		<ul id="content" >
+			<li :id='data.idNum' class="box" v-for="data in filer" v-if='data.Zone'>
+				<div class="thisPic">
+					<img :src='data.Picture1' alt="">
+				</div>
+				<h3 class="Name">{{ data.Name }}</h3>
+				<p class="Zone">{{ data.Zone }}</p>
+				<div class="text">
+					<p class="Opentime">{{ data.Opentime }}</p>
+					<p class="add">{{ data.Add }}</p>
+					<p class="Tel">{{ data.Tel }}</p>
+					<p class="Ticketinfo">{{ data.Ticketinfo }}</p>
+				</div>
+			</li>
+			<div class="clearFix"></div>
+		</ul>
+
+		<ul class="pageList" v-if="showPageList">
+			<a href="#iconDown">
+				<li class="pageBack" @click="changeContentByPageBack()">< prev</li>
+			</a>
+			<a href="#iconDown">
+				<li class="page1" @click="changeContentByPageBtn(0)" >1</li>
+			</a>
+			<a href="#iconDown">
+				<li class="page2" @click="changeContentByPageBtn(20)">2</li>
+			</a>
+			<a href="#iconDown">
+				<li class="page3" @click="changeContentByPageBtn(40)">3</li>
+			</a>
+			<a href="#iconDown">
+				<li class="page4" @click="changeContentByPageBtn(60)">4</li>
+			</a>	
+			<a href="#iconDown">
+				<li class="page5" @click="changeContentByPageBtn(80)">5</li>
+			</a>
+			<a href="#iconDown">
+				<li class="pageDown" @click="changeContentByPageNext()">next ></li>
+			</a>
+		</ul>
+
+		<div class="footer">
+			<h2 style="color:#fff">高雄旅遊景點資料庫</h2>
+			<p style="color:#FFD366">資料來源：高雄市政府</p>
+		</div>
+	</div>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtEtnHHsE_FGD2ury6y5KR-1_qdgawX6U"></script>
+	<script src="all.js"></script>
+</body>
+</html>

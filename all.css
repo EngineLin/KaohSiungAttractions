@@ -1,0 +1,236 @@
+/*CSS reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.wrap {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.clearFix {
+  clear: both; }
+
+.none {
+  display: none; }
+
+.header {
+  background: url("images/Hero.png");
+  height: 380px; }
+  .header h1 {
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 90px; }
+  .header #areaSelector {
+    display: block;
+    width: 44%;
+    height: 48px;
+    margin: 0 auto;
+    margin-top: 96px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold; }
+
+.fastList {
+  width: 78%;
+  height: 112px;
+  position: absolute;
+  top: 352px;
+  left: 11%;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+  .fastList h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 0 26px; }
+  .fastList ul {
+    margin-top: 15px;
+    margin-left: 5%; }
+    .fastList ul li {
+      float: left;
+      margin-right: 3%;
+      width: 20%;
+      height: 42px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      line-height: 42px; }
+
+.color01 {
+  background: #8A82CC 100%; }
+
+.color02 {
+  background: #FFA782 100%; }
+
+.color03 {
+  background: #F5D005 100%; }
+
+.color04 {
+  background: #559AC8 100%; }
+
+#mapTitle {
+  font-size: 34px;
+  font-weight: bold;
+  text-align:center;
+  margin-top:100px;
+}
+#map {
+  margin: 20px auto 0; 
+  height: 400px;
+  width: 90%;
+}
+
+.line {
+  margin: 33px auto 0;
+  width: 88%;
+  border-bottom: 1px dashed #559AC8; }
+
+#iconDown {
+  position: absolute;
+  top: 904px;
+  left: calc(50% - 12px);
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border: 3px solid #559AC8;
+  border-radius: 50%; }
+  #iconDown img {
+    width: 100%;
+    padding-top: 4px; }
+
+#contentTitle {
+  margin-top: 76px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 36px;
+  color: #8A82CC; }
+
+#content {
+  margin-left: 3.9%; }
+
+.box {
+  position: relative;
+  float: left;
+  width: 45.3%;
+  margin-right: 1.6%;
+  margin-bottom: 36px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+
+.thisPic {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  overflow: hidden; }
+  .thisPic img {
+    position: absolute;
+    left: 0;
+    top: -50%;
+    width: 100%; }
+
+.Name {
+  position: absolute;
+  top: 117px;
+  left: 22px;
+  font-size: 24px;
+  color: #fff; }
+
+.Zone {
+  position: absolute;
+  top: 125px;
+  right: 19px;
+  font-size: 16px;
+  color: #fff; }
+
+.text {
+  padding: 15px 0 0 23px; }
+  .text p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    background-repeat: no-repeat;
+    padding-left: 18px; }
+
+.Opentime {
+  background-image: url(../images/icons_clock.png);
+  background-size: 14px 14px; }
+
+.add {
+  background-image: url(../images/icons_pin.png);
+  background-size: 12px 14px; }
+
+.Tel {
+  background-image: url(../images/icons_phone.png);
+  background-size: auto 100%; }
+
+.Ticketinfo {
+  position: absolute;
+  top: 228px;
+  right: 19px;
+  background-image: url(../images/icons_tag.png);
+  background-size: auto 100%; }
+
+.pageList {
+  position: relative;
+  bottom: 20px;
+  left: calc(50% - 75px);
+  text-decoration: none; }
+  .pageList a {
+    color: #4A4A4A; }
+  .pageList li {
+    float: left;
+    margin-right: 10px; }
+
+.footer {
+  background-color: #559AC8;
+  height: 66px;
+  padding-top: 24px; }
+  .footer h2,.footer p {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 14px; }
+
+/*# sourceMappingURL=all.css.map */
